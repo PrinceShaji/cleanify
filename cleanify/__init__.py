@@ -4,8 +4,11 @@
 
 
 class uuid:
+
+	def __init__(self):
+		pass
 	#To search for a match in the bad words db (txt file).
-	def filter_uuid(string, file='bad_words.txt'):
+	def filter_uuid(self, string, file='bad_words.txt'):
 		import re
 		string = string.lower()
 		with open(file, 'r') as fin:
@@ -21,7 +24,7 @@ class uuid:
 				return True
 
 
-	def write_uuid(string, file):
+	def write_uuid(self, string, file):
 		with open(file, 'a') as fout:
 			fout.write(string)
 			
